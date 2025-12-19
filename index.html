@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Symaedchit Octavius Leo | Portfolio</title>
+  <meta name="description" content="Single-page portfolio: AI/software + robotics/embedded projects." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap">
+    <div class="hero">
+      <h1>Symaedchit Octavius Leo</h1>
+      <p class="subtitle">Computer Engineering (MSU, Dec 2025) — AI/software + embedded/robotics</p>
+
+      <div class="links">
+        <a class="btn" href="mailto:symaedchitleo@gmail.com">Email</a>
+        <a class="btn" href="https://linkedin.com/in/octavius-leo" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/OctaviusLeo" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Featured Projects</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>EMG-Driven Game Prototype (Senior Design)</h3>
+          <p>sEMG-driven interactive game: sensor acquisition, real-time envelope processing, on-device UI.</p>
+          <ul>
+            <li>Firmware + application logic; timing/reliability under resource constraints.</li>
+          </ul>
+          <a class="link" href="https://github.com/OctaviusLeo/ECE-480-Team-12-TI-EMG-AWS" target="_blank" rel="noreferrer">
+            Repo →
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Robotics 2D Perception + Control Loop Demo</h3>
+          <p>2D differential-drive simulator with synthetic camera frames; perception via HSV segmentation.</p>
+          <ul>
+            <li>Closed-loop heading controller; headless mode outputs a GIF demo artifact.</li>
+          </ul>
+          <a class="link" href="https://github.com/OctaviusLeo/robotics-2d-perception-control" target="_blank" rel="noreferrer">
+            Repo →
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>RAG-Lite Retrieval + Evaluation (TF-IDF)</h3>
+          <p>TF-IDF index + cosine similarity retrieval, plus an offline Recall@K evaluation harness.</p>
+          <ul>
+            <li>CLI query tool; designed to swap in embeddings/reranking later.</li>
+          </ul>
+          <a class="link" href="https://github.com/OctaviusLeo/rag-lite-tfidf-eval" target="_blank" rel="noreferrer">
+            Repo →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        I build practical, testable systems across software, embedded, and robotics.
+        This page is intentionally minimal: a fast scan + direct links to working repos.
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <small>© <span id="y"></span> Symaedchit Octavius Leo</small>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
