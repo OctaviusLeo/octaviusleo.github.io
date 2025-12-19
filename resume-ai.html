@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume (AI/SWE) | Symaedchit Octavius Leo</title>
+  <meta name="description" content="AI / Software resume (view + download)." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap">
+    <div class="pagebar">
+      <a class="link" href="index.html#resumes">← Back</a>
+      <div>
+        <h1 class="page-title">Resume (AI / Software)</h1>
+        <p class="page-sub">View in-browser or download the file.</p>
+      </div>
+      <div class="page-actions">
+        <a class="btn" href="Resume/Resume_AI_SWE.docx">Download DOCX</a>
+        <a class="btn" id="openNew" href="#" target="_blank" rel="noreferrer">Open Viewer</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="viewer">
+      <iframe id="viewerFrame" title="AI resume viewer" loading="lazy"></iframe>
+    </div>
+
+    <noscript>
+      <p>JavaScript is required to load the embedded viewer. Download instead:</p>
+      <p><a class="link" href="Resume/Resume_AI_SWE.docx">Resume_AI_SWE.docx →</a></p>
+    </noscript>
+  </main>
+
+  <script>
+    // Build absolute URL to the DOCX hosted on this same site (works for both custom domain + github.io)
+    const docUrl = new URL("Resume/Resume_AI_SWE.docx", window.location.href).toString();
+    const viewerUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(docUrl);
+
+    document.getElementById("viewerFrame").src = viewerUrl;
+    document.getElementById("openNew").href = viewerUrl;
+  </script>
+</body>
+</html>

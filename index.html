@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Symaedchit Octavius Leo | Portfolio</title>
-  <meta name="description" content="Single-page portfolio: AI/software + embedded/robotics. Projects, demos, and resume." />
+  <meta name="description" content="Single-page portfolio: AI/software + embedded/robotics. Projects, demos, and resumes." />
 
-  <!-- Open Graph (link previews) -->
+  <!-- Open Graph (optional previews) -->
   <meta property="og:title" content="Symaedchit Octavius Leo | Portfolio" />
-  <meta property="og:description" content="AI/software + embedded/robotics. Featured projects with repos and demos, plus resume." />
+  <meta property="og:description" content="AI/software + embedded/robotics. Featured projects + two lane-specific resumes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://symaedchitoctaviusleo.com/" />
   <meta property="og:image" content="https://symaedchitoctaviusleo.com/assets/og.png" />
@@ -30,7 +30,8 @@
         </div>
 
         <div class="hero-actions">
-          <a class="btn" href="Resume/Resume.docx"><Resume_Robotics_Embedded class="docx"></Resume_Robotics_Embedded></a>
+          <a class="btn" href="resume-ai.html">Resume (AI/SWE)</a>
+          <a class="btn" href="resume-robotics.html">Resume (Robotics/Embedded)</a>
           <a class="btn" href="mailto:symaedchitleo@gmail.com">Email</a>
           <a class="btn" href="https://linkedin.com/in/symaedchit-octavius-leo" target="_blank" rel="noreferrer">LinkedIn</a>
           <a class="btn" href="https://github.com/OctaviusLeo" target="_blank" rel="noreferrer">GitHub</a>
@@ -46,6 +47,37 @@
   </header>
 
   <main class="wrap">
+    <section id="resumes">
+      <h2>Resumes</h2>
+      <p class="hint">Two lane-specific versions. View in-browser or download.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-head">
+            <h3>AI / Software Resume</h3>
+            <span class="tag">Lane A</span>
+          </div>
+          <p>AI-enabled software + simulation. Python, ML fundamentals, evaluation/metrics, reproducible tooling.</p>
+          <div class="linkrow">
+            <a class="link" href="resume-ai.html">View →</a>
+            <a class="link" href="Resume/Resume_AI_SWE.docx">Download DOCX →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Robotics / Embedded Resume</h3>
+            <span class="tag">Lane B</span>
+          </div>
+          <p>Embedded systems + sensors + autonomy demos. C/C++, Python, control loops, simulation-based testing.</p>
+          <div class="linkrow">
+            <a class="link" href="resume-robotics.html">View →</a>
+            <a class="link" href="Resume/Resume_Robotics_Embedded.docx">Download DOCX →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section>
       <h2>Featured Projects</h2>
       <p class="hint">Replace demo placeholders when you have GIF/MP4 links.</p>
@@ -56,14 +88,11 @@
             <h3>EMG-Driven Game Prototype (Senior Design)</h3>
             <span class="tag">Embedded + Signal</span>
           </div>
-
           <p>sEMG-driven interactive game: sensor acquisition, real-time envelope processing, on-device UI.</p>
-
           <div class="meta">
-            <div><span class="k">Stack:</span> C, MCU firmware, SPI/I2C peripherals, real-time signal processing, OLED UI</div>
-            <div><span class="k">Proof:</span> Working firmware + game loop in repo; designed under memory/timing constraints</div>
+            <div><span class="k">Stack:</span> C, MCU firmware, peripherals, real-time signal processing, OLED UI</div>
+            <div><span class="k">Proof:</span> Firmware + game loop in repo; designed under timing/memory constraints</div>
           </div>
-
           <div class="linkrow">
             <a class="link" href="https://github.com/OctaviusLeo/ECE-480-Team-12-TI-EMG-AWS" target="_blank" rel="noreferrer">Repo →</a>
             <a class="link" href="assets/demo-emg.gif">Demo (placeholder) →</a>
@@ -75,14 +104,11 @@
             <h3>Robotics 2D Perception + Control Loop Demo</h3>
             <span class="tag">Robotics + CV</span>
           </div>
-
-          <p>2D differential-drive sim with synthetic camera frames; perception via segmentation; closed-loop heading control.</p>
-
+          <p>2D differential-drive sim with synthetic camera frames; perception + closed-loop heading control.</p>
           <div class="meta">
             <div><span class="k">Stack:</span> Python, simulation, segmentation, control loop</div>
-            <div><span class="k">Proof:</span> End-to-end pipeline runnable from repo; outputs deterministic artifacts (logs/plots/GIF)</div>
+            <div><span class="k">Proof:</span> Runnable pipeline from repo; deterministic artifacts (logs/plots/GIF)</div>
           </div>
-
           <div class="linkrow">
             <a class="link" href="https://github.com/OctaviusLeo/robotics-2d-perception-control" target="_blank" rel="noreferrer">Repo →</a>
             <a class="link" href="assets/demo-robotics.gif">Demo (placeholder) →</a>
@@ -94,14 +120,11 @@
             <h3>RAG-Lite Retrieval + Evaluation (TF-IDF)</h3>
             <span class="tag">AI SWE + Eval</span>
           </div>
-
           <p>TF-IDF indexing + cosine similarity retrieval, with an offline Recall@K evaluation harness.</p>
-
           <div class="meta">
             <div><span class="k">Stack:</span> Python, TF-IDF, cosine similarity, evaluation harness, CLI</div>
-            <div><span class="k">Proof:</span> Reproducible baseline retrieval + metrics; clean path to add embeddings/reranking later</div>
+            <div><span class="k">Proof:</span> Reproducible baseline retrieval + metrics; clean path to add reranking later</div>
           </div>
-
           <div class="linkrow">
             <a class="link" href="https://github.com/OctaviusLeo/rag-lite-tfidf-eval" target="_blank" rel="noreferrer">Repo →</a>
             <a class="link" href="assets/demo-rag.gif">Demo (placeholder) →</a>
@@ -122,16 +145,6 @@
           <li><span class="k">Systems:</span> embedded firmware, real-time loops, instrumentation</li>
           <li><span class="k">Robotics/AI:</span> perception pipelines, control loops, retrieval + evaluation</li>
         </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Links</h2>
-      <div class="linkgrid">
-        <a class="btn btn2" href="Resume/Resume.docx"><Resume_AI_SWE class="docx"></Resume_AI_SWE></a>
-        <a class="btn btn2" href="https://github.com/OctaviusLeo" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn btn2" href="https://linkedin.com/in/symaedchit-octavius-leo" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn btn2" href="mailto:symaedchitleo@gmail.com">Email</a>
       </div>
     </section>
   </main>
