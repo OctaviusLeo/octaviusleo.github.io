@@ -4,19 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Symaedchit Octavius Leo | Portfolio</title>
-  <meta name="description" content="Single-page portfolio: AI/software + robotics/embedded projects." />
+  <meta name="description" content="Single-page portfolio: AI/software + embedded/robotics. Projects, demos, and resume." />
+
+  <!-- Open Graph (link previews) -->
+  <meta property="og:title" content="Symaedchit Octavius Leo | Portfolio" />
+  <meta property="og:description" content="AI/software + embedded/robotics. Featured projects with repos and demos, plus resume." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://symaedchitoctaviusleo.com/" />
+  <meta property="og:image" content="https://symaedchitoctaviusleo.com/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="wrap">
     <div class="hero">
-      <h1>Symaedchit Octavius Leo</h1>
-      <p class="subtitle">Computer Engineering (MSU, Dec 2025) — AI/software + embedded/robotics</p>
+      <div class="hero-top">
+        <div>
+          <h1>Symaedchit Octavius Leo</h1>
+          <p class="subtitle">Computer Engineering (MSU, Dec 2025) — AI/software + embedded/robotics</p>
+          <p class="target">
+            Seeking: Embedded / Robotics Software / AI SWE — C/C++, Python, Linux, controls, CV, real-time systems
+          </p>
+        </div>
 
-      <div class="links">
-        <a class="btn" href="mailto:symaedchitleo@gmail.com">Email</a>
-        <a class="btn" href="https://linkedin.com/in/symaedchit-octavius-leo" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn" href="https://github.com/OctaviusLeo" target="_blank" rel="noreferrer">GitHub</a>
+        <div class="hero-actions">
+          <a class="btn" href="Resume/Resume.docx">Resume (DOCX)</a>
+          <a class="btn" href="mailto:symaedchitleo@gmail.com">Email</a>
+          <a class="btn" href="https://linkedin.com/in/symaedchit-octavius-leo" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/OctaviusLeo" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="quick-facts">
+        <span class="pill">US-based (MI)</span>
+        <span class="pill">Repo-first proof</span>
+        <span class="pill">Debugging + iteration</span>
       </div>
     </div>
   </header>
@@ -24,58 +48,103 @@
   <main class="wrap">
     <section>
       <h2>Featured Projects</h2>
+      <p class="hint">Replace demo placeholders when you have GIF/MP4 links.</p>
 
       <div class="grid">
         <article class="card">
-          <h3>EMG-Driven Game Prototype (Senior Design)</h3>
+          <div class="card-head">
+            <h3>EMG-Driven Game Prototype (Senior Design)</h3>
+            <span class="tag">Embedded + Signal</span>
+          </div>
+
           <p>sEMG-driven interactive game: sensor acquisition, real-time envelope processing, on-device UI.</p>
-          <ul>
-            <li>Firmware + application logic; timing/reliability under resource constraints.</li>
-          </ul>
-          <a class="link" href="https://github.com/OctaviusLeo/ECE-480-Team-12-TI-EMG-AWS" target="_blank" rel="noreferrer">
-            Repo →
-          </a>
+
+          <div class="meta">
+            <div><span class="k">Stack:</span> C, MCU firmware, SPI/I2C peripherals, real-time signal processing, OLED UI</div>
+            <div><span class="k">Proof:</span> Working firmware + game loop in repo; designed under memory/timing constraints</div>
+          </div>
+
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/ECE-480-Team-12-TI-EMG-AWS" target="_blank" rel="noreferrer">Repo →</a>
+            <a class="link" href="assets/demo-emg.gif">Demo (placeholder) →</a>
+          </div>
         </article>
 
         <article class="card">
-          <h3>Robotics 2D Perception + Control Loop Demo</h3>
-          <p>2D differential-drive simulator with synthetic camera frames; perception via HSV segmentation.</p>
-          <ul>
-            <li>Closed-loop heading controller; headless mode outputs a GIF demo artifact.</li>
-          </ul>
-          <a class="link" href="https://github.com/OctaviusLeo/robotics-2d-perception-control" target="_blank" rel="noreferrer">
-            Repo →
-          </a>
+          <div class="card-head">
+            <h3>Robotics 2D Perception + Control Loop Demo</h3>
+            <span class="tag">Robotics + CV</span>
+          </div>
+
+          <p>2D differential-drive sim with synthetic camera frames; perception via segmentation; closed-loop heading control.</p>
+
+          <div class="meta">
+            <div><span class="k">Stack:</span> Python, simulation, segmentation, control loop</div>
+            <div><span class="k">Proof:</span> End-to-end pipeline runnable from repo; outputs deterministic artifacts (logs/plots/GIF)</div>
+          </div>
+
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/robotics-2d-perception-control" target="_blank" rel="noreferrer">Repo →</a>
+            <a class="link" href="assets/demo-robotics.gif">Demo (placeholder) →</a>
+          </div>
         </article>
 
         <article class="card">
-          <h3>RAG-Lite Retrieval + Evaluation (TF-IDF)</h3>
-          <p>TF-IDF index + cosine similarity retrieval, plus an offline Recall@K evaluation harness.</p>
-          <ul>
-            <li>CLI query tool; designed to swap in embeddings/reranking later.</li>
-          </ul>
-          <a class="link" href="https://github.com/OctaviusLeo/rag-lite-tfidf-eval" target="_blank" rel="noreferrer">
-            Repo →
-          </a>
+          <div class="card-head">
+            <h3>RAG-Lite Retrieval + Evaluation (TF-IDF)</h3>
+            <span class="tag">AI SWE + Eval</span>
+          </div>
+
+          <p>TF-IDF indexing + cosine similarity retrieval, with an offline Recall@K evaluation harness.</p>
+
+          <div class="meta">
+            <div><span class="k">Stack:</span> Python, TF-IDF, cosine similarity, evaluation harness, CLI</div>
+            <div><span class="k">Proof:</span> Reproducible baseline retrieval + metrics; clean path to add embeddings/reranking later</div>
+          </div>
+
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/rag-lite-tfidf-eval" target="_blank" rel="noreferrer">Repo →</a>
+            <a class="link" href="assets/demo-rag.gif">Demo (placeholder) →</a>
+          </div>
         </article>
       </div>
     </section>
 
     <section>
       <h2>About</h2>
-      <p>
-        I build practical, testable systems across software, embedded, and robotics.
-        This page is intentionally minimal: a fast scan + direct links to working repos.
-      </p>
+      <div class="about">
+        <p>
+          I build practical systems where correctness, repeatability, and debugging discipline matter.
+          I prefer concrete demos and measurable results over broad claims.
+        </p>
+        <ul class="about-list">
+          <li><span class="k">Core:</span> C/C++, Python, Linux, Git</li>
+          <li><span class="k">Systems:</span> embedded firmware, real-time loops, instrumentation</li>
+          <li><span class="k">Robotics/AI:</span> perception pipelines, control loops, retrieval + evaluation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <div class="linkgrid">
+        <a class="btn btn2" href="Resume/Resume.docx">Resume (DOCX)</a>
+        <a class="btn btn2" href="https://github.com/OctaviusLeo" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn btn2" href="https://linkedin.com/in/symaedchit-octavius-leo" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn2" href="mailto:symaedchitleo@gmail.com">Email</a>
+      </div>
     </section>
   </main>
 
   <footer class="wrap footer">
-    <small>© <span id="y"></span> Symaedchit Octavius Leo</small>
+    <small>© <span id="y"></span> Symaedchit Octavius Leo · Last updated: <span id="lu"></span></small>
   </footer>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    const d = new Date();
+    document.getElementById("y").textContent = d.getFullYear();
+    const pad = (n) => String(n).padStart(2, "0");
+    document.getElementById("lu").textContent = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
   </script>
 </body>
 </html>
