@@ -1,7 +1,25 @@
 /* styles.css */
-:root { color-scheme: light dark; }
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: rgba(0,0,0,0.6);
+  --border: rgba(0,0,0,0.12);
+  --card-bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0d;
+    --text: #e6e6e6;
+    --muted: rgba(255,255,255,0.7);
+    --border: rgba(255,255,255,0.08);
+    --card-bg: #0f1113;
+  }
+}
+
 * { box-sizing: border-box; }
-body { margin: 0; font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+body { margin: 0; font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
 .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
 
 .hero { padding: 20px 0 10px; }
@@ -109,3 +127,11 @@ main h2 { margin: 26px 0 10px; }
   height: 78vh;
   border: 0;
 }
+
+/* Theme adjustments using variables */
+.pill, .btn, .card, .tag, .about, .viewer { background: var(--card-bg); border-color: var(--border); }
+.link { border-bottom-color: var(--border); }
+.meta { border-top-color: var(--border); }
+.pagebar { border-bottom-color: var(--border); }
+.footer { color: var(--muted); }
+.mode-note { display: block; margin-top: 6px; opacity: 0.85; font-size: 13px; }
