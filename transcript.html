@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume (AI/SWE) | Symaedchit Octavius Leo</title>
+  <title>Transcript | Symaedchit Octavius Leo</title>
   <meta name="description" content="Transcript (view + download)." />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -12,34 +12,29 @@
     <div class="pagebar">
       <a class="link" href="index.html#resumes">← Back</a>
       <div>
-        <h1 class="page-title">Resume (AI / Software)</h1>
-        <p class="page-sub">View in-browser or download the file.</p>
+        <h1 class="page-title">Transcript (PDF)</h1>
+        <p class="page-sub">View in-browser or download.</p>
       </div>
       <div class="page-actions">
-        <a class="btn" href="Transcript/OfficialTranscript.pdf">Download PDF</a>
-        <a class="btn" id="openNew" href="#" target="_blank" rel="noreferrer">Open Viewer</a>
+        <a class="btn" href="Transcript/OfficialTranscript.pdf" download>Download PDF</a>
+        <a class="btn" href="Transcript/OfficialTranscript.pdf" target="_blank" rel="noreferrer">Open PDF</a>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="viewer">
-      <iframe id="viewerFrame" title="AI resume viewer" loading="lazy"></iframe>
+      <!-- Direct embed -->
+      <iframe
+        src="Transcript/OfficialTranscript.pdf"
+        title="Transcript PDF"
+        loading="lazy">
+      </iframe>
     </div>
 
     <noscript>
-      <p>JavaScript is required to load the embedded viewer. Download instead:</p>
-      <p><a class="link" href="Transcript/OfficialTranscript.pdf">OfficialTranscript.pdf →</a></p>
+      <p><a class="link" href="Transcript/OfficialTranscript.pdf">Open transcript PDF →</a></p>
     </noscript>
   </main>
-
-  <script>
-    // Build absolute URL to the PDF hosted on this same site (works for both custom domain + github.io)
-    const pdfUrl = new URL("Transcript/OfficialTranscript.pdf", window.location.href).toString();
-    const viewerUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(pdfUrl);
-
-    document.getElementById("viewerFrame").src = viewerUrl;
-    document.getElementById("openNew").href = viewerUrl;
-  </script>
 </body>
 </html>
