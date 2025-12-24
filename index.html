@@ -86,7 +86,7 @@
           <p>MSU transcript (PDF). Aug (2023) - Dec (2025).</p>
           <div class="linkrow">
             <a class="link" href="transcript.html">View →</a>
-            <a class="link" href="Transcript/OfficialTranscript.pdf">Download PDF →</a>
+            <a class="link" id="dlTranscript" href="Transcript/OfficialTranscript.pdf">Download PDF →</a>
           </div>
         </article>
 
@@ -178,6 +178,32 @@
     document.getElementById("y").textContent = d.getFullYear();
     const pad = (n) => String(n).padStart(2, "0");
     document.getElementById("lu").textContent = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+
+    const dlLink = document.getElementById("dlTranscript");
+    if (dlLink) {
+      const pdfUrl = new URL("Transcript/OfficialTranscript.pdf", window.location.href).toString();
+      dlLink.href = pdfUrl;
+      dlLink.setAttribute("download", "OfficialTranscript.pdf");
+      dlLink.addEventListener("click", async (event) => {
+        event.preventDefault();
+        try {
+          const response = await fetch(pdfUrl);
+          if (!response.ok) throw new Error("fetch failed");
+          const blob = await response.blob();
+          const blobUrl = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = blobUrl;
+          a.download = "OfficialTranscript.pdf";
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          URL.revokeObjectURL(blobUrl);
+        } catch (err) {
+          // Fallback if fetch blocked
+          window.location.href = pdfUrl;
+        }
+      });
+    }
   </script>
 </body>
 </html>

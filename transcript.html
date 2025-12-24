@@ -16,8 +16,8 @@
         <p class="page-sub">View in-browser or download.</p>
       </div>
       <div class="page-actions">
-        <a class="btn" href="Transcript/OfficialTranscript.pdf" download>Download PDF</a>
-        <a class="btn" href="Transcript/OfficialTranscript.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+        <a class="btn" id="downloadPdf" href="Transcript/OfficialTranscript.pdf" download>Download PDF</a>
+        <a class="btn" id="openPdf" href="Transcript/OfficialTranscript.pdf" target="_blank" rel="noreferrer">Open PDF</a>
       </div>
     </div>
   </header>
@@ -26,6 +26,7 @@
     <div class="viewer">
       <!-- Direct embed -->
       <iframe
+        id="pdfFrame"
         src="Transcript/OfficialTranscript.pdf"
         title="Transcript PDF"
         loading="lazy">
@@ -36,5 +37,39 @@
       <p><a class="link" href="Transcript/OfficialTranscript.pdf">Open transcript PDF →</a></p>
     </noscript>
   </main>
+
+    <script>
+      // Force a true download dialog instead of inline open
+      const pdfUrl = new URL("Transcript/OfficialTranscript.pdf", window.location.href).toString();
+      const downloadBtn = document.getElementById("downloadPdf");
+      const openBtn = document.getElementById("openPdf");
+      const frame = document.getElementById("pdfFrame");
+
+      if (openBtn) openBtn.href = pdfUrl;
+      if (frame) frame.src = pdfUrl;
+      if (downloadBtn) {
+        downloadBtn.href = pdfUrl;
+        downloadBtn.setAttribute("download", "OfficialTranscript.pdf");
+        downloadBtn.addEventListener("click", async (event) => {
+          event.preventDefault();
+          try {
+            const response = await fetch(pdfUrl);
+            if (!response.ok) throw new Error("failed fetch");
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = blobUrl;
+            a.download = "OfficialTranscript.pdf";
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(blobUrl);
+          } catch (err) {
+            // Fallback to normal navigation if fetch fails
+            window.location.href = pdfUrl;
+          }
+        });
+      }
+    </script>
 </body>
 </html>
