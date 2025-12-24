@@ -13,7 +13,7 @@ Static site for my resumes and transcript, hosted on GitHub Pages with a custom 
 - CNAME: custom domain mapping
 
 ## Run locally
-Open index.html in a browser or serve the folder (e.g., `python -m http.server 8000`). Relative links assume the repo root as the web root.
+Open index.html in a browser or serve the folder (`python -m http.server 8000`). Relative links assume the repo root as the web root.
 
 ## Deploy
 Push to the `main` branch of this repo; GitHub Pages (and the CNAME) serve the static files as-is. 
