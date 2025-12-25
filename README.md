@@ -18,7 +18,8 @@ Personal portfolio website showcasing resumes, transcript, and featured projects
 * **CNAME**: Custom domain mapping for GitHub Pages
 
 ## Run locally
-Open `index.html` in a browser or serve the folder (`python -m http.server 8000`). Relative links assume the repo root as the web root.
+Open `index.html` in a browser or serve the folder (`python -m http.server 8000`). 
+Relative links assume the repo root as the web root.
 
 ## Deploy
 Push to the `main` branch of this repo. GitHub Pages (and the CNAME) serve the static files as-is. 
