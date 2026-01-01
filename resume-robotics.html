@@ -16,7 +16,7 @@
         <p class="page-sub">View in-browser or download the file.</p>
       </div>
       <div class="page-actions">
-        <a class="btn" href="Resume/Resume_Robotics_Embedded.docx">Download DOCX</a>
+        <a class="btn" href="Resume/Resume_Robotics_Embedded.doc">Download DOC</a>
         <a class="btn" id="openNew" href="#" target="_blank" rel="noreferrer">Open Viewer</a>
       </div>
     </div>
@@ -29,12 +29,12 @@
 
     <noscript>
       <p>JavaScript is required to load the embedded viewer. Download instead:</p>
-      <p><a class="link" href="Resume/Resume_Robotics_Embedded.docx">Resume_Robotics_Embedded.docx →</a></p>
+      <p><a class="link" href="Resume/Resume_Robotics_Embedded.doc">Resume_Robotics_Embedded.doc →</a></p>
     </noscript>
   </main>
 
   <script>
-    const docUrl = new URL("Resume/Resume_Robotics_Embedded.docx", window.location.href).toString();
+    const docUrl = new URL("Resume/Resume_Robotics_Embedded.doc", window.location.href).toString();
     const viewerUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(docUrl);
 
     document.getElementById("viewerFrame").src = viewerUrl;

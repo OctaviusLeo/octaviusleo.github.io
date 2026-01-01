@@ -16,7 +16,7 @@
         <p class="page-sub">View in-browser or download the file.</p>
       </div>
       <div class="page-actions">
-        <a class="btn" href="Resume/Resume_AI_SWE.docx">Download DOCX</a>
+        <a class="btn" href="Resume/Resume_AI_SWE.doc">Download DOC</a>
         <a class="btn" id="openNew" href="#" target="_blank" rel="noreferrer">Open Viewer</a>
       </div>
     </div>
@@ -29,13 +29,13 @@
 
     <noscript>
       <p>JavaScript is required to load the embedded viewer. Download instead:</p>
-      <p><a class="link" href="Resume/Resume_AI_SWE.docx">Resume_AI_SWE.docx →</a></p>
+      <p><a class="link" href="Resume/Resume_AI_SWE.doc">Resume_AI_SWE.doc →</a></p>
     </noscript>
   </main>
 
   <script>
-    // Build absolute URL to the DOCX hosted on this same site (works for both custom domain + github.io)
-    const docUrl = new URL("Resume/Resume_AI_SWE.docx", window.location.href).toString();
+    // Build absolute URL to the DOC hosted on this same site (works for both custom domain + github.io)
+    const docUrl = new URL("Resume/Resume_AI_SWE.doc", window.location.href).toString();
     const viewerUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(docUrl);
 
     document.getElementById("viewerFrame").src = viewerUrl;
