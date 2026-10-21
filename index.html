@@ -79,18 +79,6 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-head">
-            <h3>Official Transcript</h3>
-            <span class="tag">Academic</span>
-          </div>
-          <p>MSU transcript (PDF), Aug 2023 – Dec 2025.</p>
-          <div class="linkrow">
-            <a class="link" href="transcript.html">View →</a>
-            <a class="link" id="dlTranscript" href="Transcript/OfficialTranscript.pdf">Download PDF →</a>
-          </div>
-        </article>
-
       </div>
     </section>
 
@@ -253,32 +241,6 @@
   <script>
     const d = new Date();
     document.getElementById("y").textContent = d.getFullYear();
-
-    const dlLink = document.getElementById("dlTranscript");
-    if (dlLink) {
-      const pdfUrl = new URL("Transcript/OfficialTranscript.pdf", window.location.href).toString();
-      dlLink.href = pdfUrl;
-      dlLink.setAttribute("download", "OfficialTranscript.pdf");
-      dlLink.addEventListener("click", async (event) => {
-        event.preventDefault();
-        try {
-          const response = await fetch(pdfUrl);
-          if (!response.ok) throw new Error("fetch failed");
-          const blob = await response.blob();
-          const blobUrl = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = blobUrl;
-          a.download = "OfficialTranscript.pdf";
-          document.body.appendChild(a);
-          a.click();
-          a.remove();
-          URL.revokeObjectURL(blobUrl);
-        } catch (err) {
-          // Fallback if fetch blocked
-          window.location.href = pdfUrl;
-        }
-      });
-    }
   </script>
 </body>
 </html>
