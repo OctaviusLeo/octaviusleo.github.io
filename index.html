@@ -145,7 +145,7 @@
           <p>PPO navigation policies trained in 4,096 GPU-parallel MuJoCo Warp arenas, baseline vs. domain-randomized, then exported to ONNX and run as the opponent in an Unreal Engine 5.8 game.</p>
           <div class="meta">
             <div><span class="k">Stack:</span> Python, PyTorch, MuJoCo Warp, rsl-rl PPO, ONNX, Unreal Engine 5.8 (C++)</div>
-            <div><span class="k">Result:</span> at 4 steps of latency, 0.131 success (baseline) vs 0.896 (randomized); +0.013 sim-to-sim gap</div>
+            <div><span class="k">Result:</span> with 4 control steps (200 ms) of latency on both action and observation, 0.131 success (baseline) vs 0.896 (randomized)</div>
           </div>
           <div class="linkrow">
             <a class="link" href="https://github.com/OctaviusLeo/Learned-Opponents" target="_blank" rel="noreferrer">Repo →</a>
@@ -165,7 +165,7 @@
           <p>RAG service that answers only from retrieved passages, validates every sentence's citation and refuses below a confidence threshold tuned on a held-out split.</p>
           <div class="meta">
             <div><span class="k">Stack:</span> Python, FastAPI, Granite on Ollama, cross-encoder reranking, Docker</div>
-            <div><span class="k">Result:</span> Recall@5 0.847 → 0.957 with hybrid retrieval + reranking (200 SQuAD v2 questions); citation precision 0.891</div>
+            <div><span class="k">Result:</span> Recall@5 0.847 → 0.957 with hybrid retrieval + reranking (150 answerable SQuAD v2 questions)</div>
           </div>
           <div class="linkrow">
             <a class="link" href="https://github.com/OctaviusLeo/Grounded-QA-Service" target="_blank" rel="noreferrer">Repo →</a>
@@ -182,7 +182,7 @@
           <p>LoRA fine-tune of Qwen2.5-1.5B-Instruct for intent-and-slot extraction on MASSIVE, quantized to GGUF and served behind an OpenAI-compatible llama-server endpoint.</p>
           <div class="meta">
             <div><span class="k">Stack:</span> Python, PyTorch, Hugging Face PEFT (LoRA), llama.cpp, Docker</div>
-            <div><span class="k">Result:</span> field-level F1 0.850 ± 0.002 (3 seeds) vs 0.358 few-shot base; Q4_K_M F1 0.846 at 2.6 GB VRAM</div>
+            <div><span class="k">Result:</span> field-level F1 0.850 ± 0.002 (3 seeds) vs 0.358 few-shot base; Q4_K_M F1 0.846; peak whole-GPU memory 4859 → 2617 MiB</div>
           </div>
           <div class="linkrow">
             <a class="link" href="https://github.com/OctaviusLeo/Finetune-And-Serve" target="_blank" rel="noreferrer">Repo →</a>
@@ -199,7 +199,7 @@
           <p>Reproducible benchmark of how often tool-using LLM agents follow instructions planted in tool outputs, and what each defense costs: 40 AgentDojo tasks, 5 injection styles, 4 defenses, 3 models.</p>
           <div class="meta">
             <div><span class="k">Stack:</span> Python, AgentDojo, llama.cpp, OpenAI API, DeBERTa classifier</div>
-            <div><span class="k">Result:</span> 7,200 cases: a DeBERTa injection filter cost 27 to 56 points of task success for at most a 2.3-point drop in attack success</div>
+            <div><span class="k">Result:</span> 7,200 cases (hosted model: 2 of 5 styles): a DeBERTa injection filter cost 26.5 to 56.2 points of task success for at most a 2.3-point drop in attack success</div>
           </div>
           <div class="linkrow">
             <a class="link" href="https://github.com/OctaviusLeo/Agent-Injection-Bench" target="_blank" rel="noreferrer">Repo →</a>
@@ -216,7 +216,7 @@
             <h3>EMG Arm-Wrestling Game System</h3>
             <span class="tag">Embedded + Signal</span>
           </div>
-          <p>Sole software member of a four-person Texas Instruments-sponsored senior design team (Fall 2025): wrote C firmware turning filtered surface-EMG into real-time game input for four modes.</p>
+          <p>Sole software member of a four-person Texas Instruments-sponsored senior design team (Fall 2025): wrote the TM4C123 C firmware: ADS131M02 SPI ADC driver, SSD1351 OLED graphics, menus and four game modes, and a baseline-corrected EMG measure.</p>
           <div class="meta">
             <div><span class="k">Stack:</span> C, TI Tiva C (TM4C123) microcontroller, Code Composer Studio, OLED UI</div>
           </div>
