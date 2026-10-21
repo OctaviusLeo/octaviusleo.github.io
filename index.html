@@ -51,7 +51,7 @@
 
   <main class="wrap">
     <section id="resumes">
-      <h2>Files</h2>
+      <h2>Resumes</h2>
       <p class="hint"><strong>Two track-specific 2026 resumes.</strong> View in-browser or <strong>download</strong> the PDF.</p>
 
       <div class="grid">
@@ -81,10 +81,10 @@
 
         <article class="card">
           <div class="card-head">
-            <h3>Official Transcript </h3>
+            <h3>Official Transcript</h3>
             <span class="tag">Academic</span>
           </div>
-          <p>MSU transcript (PDF). Aug (2023) - Dec (2025).</p>
+          <p>MSU transcript (PDF), Aug 2023 – Dec 2025.</p>
           <div class="linkrow">
             <a class="link" href="transcript.html">View →</a>
             <a class="link" id="dlTranscript" href="Transcript/OfficialTranscript.pdf">Download PDF →</a>
@@ -231,29 +231,28 @@
       <h2>About</h2>
       <div class="about">
         <p>
-          Fascinated by AI/ML well before today’s public LLM wave. I’ve been coding since learning through games and projects.
-          I focus on robotics simulation/test/autonomy and AI/ML engineering. This page is intentionally minimal: optimized for fast scanning and direct links to working repos/demos.
+          I build simulation, test and autonomy software for robots, and ML systems that are measured end to end.
+          I learned to code through games and have followed AI/ML since well before the current LLM wave.
+          This page is kept minimal so you can get straight to the repos, demos and resumes.
         </p>
         <ul class="about-list">
           <li><span class="k">Seeking:</span> Robotics, simulation and test roles; AI/ML engineering roles.</li>
           <li><span class="k">Robotics/Sim:</span> ROS 2 Jazzy - Nav2 - Gazebo Harmonic - Unreal Engine 5.8 - MuJoCo Warp</li>
           <li><span class="k">AI/ML:</span> PyTorch - PEFT/LoRA - llama.cpp - retrieval + evaluation - PPO</li>
-          <li><span class="k">Embedded:</span> TI Tiva C (TM4C123) - real-time sEMG signal processing</li>
+          <li><span class="k">Embedded:</span> TI Tiva C (TM4C123) - SPI ADC and OLED drivers - Code Composer Studio</li>
         </ul>
       </div>
     </section>
   </main>
 
   <footer class="wrap footer">
-    <small>© <span id="y"></span> Symaedchit Octavius Leo · Last updated/shipped: <span id="lu"></span></small>
+    <small>© <span id="y"></span> Symaedchit Octavius Leo · Last updated: 2026-10-21</small>
     <small class="mode-note">Dark/Light mode is based on browser</small>
   </footer>
 
   <script>
     const d = new Date();
     document.getElementById("y").textContent = d.getFullYear();
-    const pad = (n) => String(n).padStart(2, "0");
-    document.getElementById("lu").textContent = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 
     const dlLink = document.getElementById("dlTranscript");
     if (dlLink) {
