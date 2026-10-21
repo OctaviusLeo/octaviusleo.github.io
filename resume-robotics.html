@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume (Robotics/Embedded) | Symaedchit Octavius Leo</title>
-  <meta name="description" content="Robotics / Embedded resume (view + download)." />
+  <title>Resume (Robotics) | Symaedchit Octavius Leo</title>
+  <meta name="description" content="Robotics / simulation / test resume, 2026 (view + download PDF)." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,33 +12,20 @@
     <div class="pagebar">
       <a class="link" href="index.html#resumes">← Back</a>
       <div>
-        <h1 class="page-title">Resume (Robotics / Embedded)</h1>
-        <p class="page-sub">View in-browser or download the file.</p>
+        <h1 class="page-title">Resume (Robotics / Simulation / Test, 2026)</h1>
+        <p class="page-sub">View in-browser or download the PDF.</p>
       </div>
       <div class="page-actions">
-        <a class="btn" href="Resume/Resume_Robotics_Embedded.doc">Download DOC</a>
-        <a class="btn" id="openNew" href="#" target="_blank" rel="noreferrer">Open Viewer</a>
+        <a class="btn" href="Resume/Symaedchit_Octavius_Leo_Resume_Robotics_2026.pdf" download>Download PDF</a>
+        <a class="btn" href="Resume/Symaedchit_Octavius_Leo_Resume_Robotics_2026.pdf" target="_blank" rel="noreferrer">Open PDF</a>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="viewer">
-      <iframe id="viewerFrame" title="Robotics resume viewer" loading="lazy"></iframe>
+      <iframe src="Resume/Symaedchit_Octavius_Leo_Resume_Robotics_2026.pdf" title="Robotics resume PDF" loading="lazy"></iframe>
     </div>
-
-    <noscript>
-      <p>JavaScript is required to load the embedded viewer. Download instead:</p>
-      <p><a class="link" href="Resume/Resume_Robotics_Embedded.doc">Resume_Robotics_Embedded.doc →</a></p>
-    </noscript>
   </main>
-
-  <script>
-    const docUrl = new URL("Resume/Resume_Robotics_Embedded.doc", window.location.href).toString();
-    const viewerUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(docUrl);
-
-    document.getElementById("viewerFrame").src = viewerUrl;
-    document.getElementById("openNew").href = viewerUrl;
-  </script>
 </body>
 </html>
