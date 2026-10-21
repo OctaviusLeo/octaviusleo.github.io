@@ -73,6 +73,19 @@ main h2 { margin: 26px 0 10px; }
 
 .card p { margin: 0 0 10px; opacity: 0.9; }
 
+main h3.group { margin: 18px 0 10px; font-size: 17px; opacity: 0.85; }
+.thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 0 0 10px;
+}
+
 .meta {
   display: grid;
   gap: 6px;

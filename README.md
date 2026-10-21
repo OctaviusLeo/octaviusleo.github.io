@@ -5,15 +5,15 @@ Personal portfolio website showcasing resumes, transcript, and featured projects
 ## Structure
 * **index.html**: Main landing page featuring:
   * Hero section with contact links (Email, LinkedIn, Handshake, GitHub, LeetCode)
-  * Two lane specific resume cards (AI/Software and Robotics/Embedded)
+  * Two track-specific 2026 resume cards (Robotics/Simulation/Test and AI/ML)
   * Transcript card
-  * Featured Projects section (EMG game, Robotics demo, RAG lite)
+  * Featured Projects section: six portfolio projects grouped Robotics/Simulation/Test and AI/ML, plus the ECE-480 senior design
   * About section
-* **resume-ai.html / resume-robotics.html**: Pages with Microsoft Office Online viewer (iframe) + download buttons for DOCX files
+* **resume-ai.html / resume-robotics.html**: PDF embed viewer + download button for each 2026 resume
 * **transcript.html**: PDF embed viewer + download button
 * **styles.css**: Shared layout/theme/styles
-* **assets/**: Images (project demos), favicon, OG image for social sharing
-* **Resume/**: Source DOCX files for both resumes
+* **assets/**: Project thumbnails and demos (GIFs/figures copied from each project repo, GIFs downscaled to 400 px wide), favicon, OG image for social sharing
+* **Resume/**: The two 2026 resume PDFs
 * **Transcript/**: OfficialTranscript.pdf
 * **CNAME**: Custom domain mapping for GitHub Pages
 

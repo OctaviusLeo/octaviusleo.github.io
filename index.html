@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Symaedchit Octavius Leo | Portfolio</title>
-  <meta name="description" content="Single-page portfolio: AI/software + embedded/robotics. Projects, demos, and resumes." />
+  <meta name="description" content="Single-page portfolio: robotics simulation, test and autonomy software + evaluated AI/ML systems. Projects, demos, and resumes." />
 
   <!-- Open Graph (optional previews) -->
   <meta property="og:title" content="Symaedchit Octavius Leo | Portfolio" />
-  <meta property="og:description" content="AI/software + embedded/robotics. Featured projects + two lane-specific resumes." />
+  <meta property="og:description" content="Robotics simulation/test/autonomy + AI/ML. Six portfolio projects, senior design, and two track-specific resumes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://symaedchitoctaviusleo.com/" />
   <meta property="og:image" content="https://symaedchitoctaviusleo.com/assets/og.png" />
@@ -24,8 +24,10 @@
         <div>
          <!-- Header -->
           <h1>Symaedchit Octavius Leo</h1>
-          <p class="subtitle">Computer Engineering (Michigan State University, Dec 2025, GPA 3.31) - AI/SWE + Robotics/Embedded</p>
+          <p class="subtitle">Computer Engineering (Michigan State University, Dec 2025, GPA 3.31) - Robotics/Simulation/Test + AI/ML</p>
           <p class="target">
+            Computer engineer who builds simulation, test and autonomy software and evaluated ML systems: a ROS 2/Nav2 fault-injection harness,
+            an Unreal Engine sensor simulator on ROS 2, GPU-parallel RL, LLM fine-tuning and serving, grounded RAG and agent prompt-injection benchmarks.
           </p>
         </div>
 
@@ -40,7 +42,7 @@
       </div>
 
       <div class="quick-facts">
-        <span class="pill">US-based (MI) Open to Relocate</span>
+        <span class="pill">Falls Church, VA - Open to Relocate</span>
         <span class="pill">American Citizen</span>
         <span class="pill">East-Asian & Male</span>
         <span class="pill">NOT Protected Veteran and Disability</span>
@@ -52,30 +54,30 @@
   <main class="wrap">
     <section id="resumes">
       <h2>Files</h2>
-      <p class="hint"><strong>Two lane-specific versions.</strong> View in-browser or <strong>download</strong>.</p>
+      <p class="hint"><strong>Two track-specific 2026 resumes.</strong> View in-browser or <strong>download</strong> the PDF.</p>
 
       <div class="grid">
         <article class="card">
           <div class="card-head">
-            <h3>AI / Software Resume</h3>
-            <span class="tag">Lane A</span>
+            <h3>Robotics / Simulation / Test Resume</h3>
+            <span class="tag">Robotics</span>
           </div>
-          <p>AI-enabled software + simulation. Python, ML fundamentals, evaluation/metrics, reproducible tooling.</p>
+          <p>ROS 2/Nav2 fault-injection harness, Unreal Engine sensor simulator on ROS 2, GPU-parallel RL, embedded C (senior design).</p>
           <div class="linkrow">
-            <a class="link" href="resume-ai.html">View →</a>
-            <a class="link" href="Resume/Resume_AI_SWE.doc">Download DOC →</a>
+            <a class="link" href="resume-robotics.html">View →</a>
+            <a class="link" href="Resume/Symaedchit_Octavius_Leo_Resume_Robotics_2026.pdf" download>Download PDF →</a>
           </div>
         </article>
 
         <article class="card">
           <div class="card-head">
-            <h3>Robotics / Embedded Resume</h3>
-            <span class="tag">Lane B</span>
+            <h3>AI / ML Resume</h3>
+            <span class="tag">AI/ML</span>
           </div>
-          <p>Embedded systems + sensors + autonomy demos. C/C++, Python, control loops, simulation-based testing.</p>
+          <p>LLM fine-tuning, quantization and serving, grounded RAG with citation validation, agent prompt-injection benchmarks, GPU-parallel RL.</p>
           <div class="linkrow">
-            <a class="link" href="resume-robotics.html">View →</a>
-            <a class="link" href="Resume/Resume_Robotics_Embedded.doc">Download DOC →</a>
+            <a class="link" href="resume-ai.html">View →</a>
+            <a class="link" href="Resume/Symaedchit_Octavius_Leo_Resume_AI_2026.pdf" download>Download PDF →</a>
           </div>
         </article>
 
@@ -95,56 +97,132 @@
     </section>
 
     <!-- Projects -->
-    <section>
+    <section id="projects">
       <h2>Featured Projects</h2>
-      <p class="hint">For more projects for <strong>AI/SWE</strong> and <strong>Robotics/Software</strong>, such as <strong>RAG Demos</strong>, <strong>games</strong>, <strong>pipelines</strong> and more, please check my <strong>github</strong>.</p>
+      <p class="hint">Built with an AI coding agent under spec-driven development; every number below comes from a seeded script in the repository.
+        Earlier projects (RAG-Lite, 2D perception + control, CartPole PPO and more) are on my <a class="link" href="https://github.com/OctaviusLeo" target="_blank" rel="noreferrer">GitHub</a>.</p>
 
+      <h3 class="group">Robotics, simulation and test</h3>
       <div class="grid">
         <article class="card">
           <div class="card-head">
-            <h3>EMG-Driven Game Prototype (Senior Design)</h3>
+            <h3>Autonomy Test Harness</h3>
+            <span class="tag">Robotics + Test</span>
+          </div>
+          <p>Scenario-based test system for Nav2 on TurtleBot 4: seeded scenario generator, lidar fault injector (noise, dropout, latency, freeze, sector blackout) and a ground-truth-only oracle.</p>
+          <div class="meta">
+            <div><span class="k">Stack:</span> ROS 2 Jazzy, Nav2, Gazebo Harmonic, Docker, Jenkins, Python</div>
+            <div><span class="k">Result:</span> 210 headless runs (30 scenarios × 7 conditions): Nav2 passed 100% unfaulted, 80% under sector blackout, 0% under scan dropout or freeze</div>
+          </div>
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/Autonomy-Test-Harness" target="_blank" rel="noreferrer">Repo →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="assets/sensor-sim-sandbox.gif" alt="Unreal Engine rover driving its waypoint route" width="400" height="225" loading="lazy" />
+          <div class="card-head">
+            <h3>Sensor Sim Sandbox</h3>
+            <span class="tag">Simulation</span>
+          </div>
+          <p>Drivable Unreal Engine 5.8 rover whose lidar, camera, IMU and GPS share a seeded noise/dropout/latency pipeline and stream to ROS 2 Jazzy over rosbridge.</p>
+          <div class="meta">
+            <div><span class="k">Stack:</span> Unreal Engine 5.8 (C++), ROS 2 Jazzy, rosbridge, Python</div>
+            <div><span class="k">Result:</span> measured lidar std 0.0200 m vs 0.02 m configured; 33 Unreal automation tests</div>
+          </div>
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/Sensor-Sim-Sandbox" target="_blank" rel="noreferrer">Repo →</a>
+            <a class="link" href="assets/sensor-sim-sandbox.gif">Demo (GIF) →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="assets/learned-opponents.gif" alt="ONNX policy robot racing a scripted robot in the Unreal Engine game" width="400" height="225" loading="lazy" />
+          <div class="card-head">
+            <h3>Learned Opponents</h3>
+            <span class="tag">RL + Sim-to-Sim</span>
+          </div>
+          <p>PPO navigation policies trained in 4,096 GPU-parallel MuJoCo Warp arenas, baseline vs. domain-randomized, then exported to ONNX and run as the opponent in an Unreal Engine 5.8 game.</p>
+          <div class="meta">
+            <div><span class="k">Stack:</span> Python, PyTorch, MuJoCo Warp, rsl-rl PPO, ONNX, Unreal Engine 5.8 (C++)</div>
+            <div><span class="k">Result:</span> at 4 steps of latency, 0.131 success (baseline) vs 0.896 (randomized); +0.013 sim-to-sim gap</div>
+          </div>
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/Learned-Opponents" target="_blank" rel="noreferrer">Repo →</a>
+            <a class="link" href="assets/learned-opponents.gif">Demo (GIF) →</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="group">AI / ML</h3>
+      <div class="grid">
+        <article class="card">
+          <img class="thumb" src="assets/grounded-qa-service.gif" alt="Streamed answers with citations, and a refusal" width="1180" height="330" loading="lazy" />
+          <div class="card-head">
+            <h3>Grounded QA Service</h3>
+            <span class="tag">RAG + Eval</span>
+          </div>
+          <p>RAG service that answers only from retrieved passages, validates every sentence's citation and refuses below a confidence threshold tuned on a held-out split.</p>
+          <div class="meta">
+            <div><span class="k">Stack:</span> Python, FastAPI, Granite on Ollama, cross-encoder reranking, Docker</div>
+            <div><span class="k">Result:</span> Recall@5 0.847 → 0.957 with hybrid retrieval + reranking (200 SQuAD v2 questions); citation precision 0.891</div>
+          </div>
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/Grounded-QA-Service" target="_blank" rel="noreferrer">Repo →</a>
+            <a class="link" href="assets/grounded-qa-service.gif">Demo (GIF) →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="assets/finetune-and-serve.png" alt="Sweep validation F1 and test F1 with confidence intervals" width="1320" height="480" loading="lazy" />
+          <div class="card-head">
+            <h3>Fine-Tune and Serve</h3>
+            <span class="tag">LLM + Serving</span>
+          </div>
+          <p>LoRA fine-tune of Qwen2.5-1.5B-Instruct for intent-and-slot extraction on MASSIVE, quantized to GGUF and served behind an OpenAI-compatible llama-server endpoint.</p>
+          <div class="meta">
+            <div><span class="k">Stack:</span> Python, PyTorch, Hugging Face PEFT (LoRA), llama.cpp, Docker</div>
+            <div><span class="k">Result:</span> field-level F1 0.850 ± 0.002 (3 seeds) vs 0.358 few-shot base; Q4_K_M F1 0.846 at 2.6 GB VRAM</div>
+          </div>
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/Finetune-And-Serve" target="_blank" rel="noreferrer">Repo →</a>
+            <a class="link" href="assets/finetune-and-serve.png">Figure (PNG) →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="assets/agent-injection-bench.png" alt="Task-success cost of each defense" width="1500" height="630" loading="lazy" />
+          <div class="card-head">
+            <h3>Agent Injection Bench</h3>
+            <span class="tag">LLM Security</span>
+          </div>
+          <p>Reproducible benchmark of how often tool-using LLM agents follow instructions planted in tool outputs, and what each defense costs: 40 AgentDojo tasks, 5 injection styles, 4 defenses, 3 models.</p>
+          <div class="meta">
+            <div><span class="k">Stack:</span> Python, AgentDojo, llama.cpp, OpenAI API, DeBERTa classifier</div>
+            <div><span class="k">Result:</span> 7,200 cases: a DeBERTa injection filter cost 27 to 56 points of task success for at most a 2.3-point drop in attack success</div>
+          </div>
+          <div class="linkrow">
+            <a class="link" href="https://github.com/OctaviusLeo/Agent-Injection-Bench" target="_blank" rel="noreferrer">Repo →</a>
+            <a class="link" href="assets/agent-injection-bench.png">Figure (PNG) →</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="group">Senior design</h3>
+      <div class="grid">
+        <article class="card">
+          <img class="thumb" src="assets/ece480-afe-schematic.png" alt="Analog front-end schematic" width="900" height="546" loading="lazy" />
+          <div class="card-head">
+            <h3>EMG Arm-Wrestling Game System</h3>
             <span class="tag">Embedded + Signal</span>
           </div>
-          <p>sEMG-driven interactive game: An entire game inside an MCU using sEMG as input Arcade styled.</p>
+          <p>Sole software member of a four-person Texas Instruments-sponsored senior design team (Fall 2025): wrote C firmware turning filtered surface-EMG into real-time game input for four modes.</p>
           <div class="meta">
-            <div><span class="k">Stack:</span> C, MCU firmware, peripherals, real-time signal processing, OLED UI</div>
-            <div><span class="k">Proof:</span> Firmware + game loop in repo; designed under timing/memory constraints</div>
+            <div><span class="k">Stack:</span> C, TI Tiva C (TM4C123) microcontroller, Code Composer Studio, OLED UI</div>
           </div>
           <div class="linkrow">
             <a class="link" href="https://github.com/OctaviusLeo/ECE-480-Team-12-TI-EMG-AWS" target="_blank" rel="noreferrer">Repo →</a>
             <a class="link" href="https://www.youtube.com/watch?v=2_F4ziM3Mrs" target="_blank" rel="noreferrer">Demo (YouTube) →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <h3>Robotics 2D Perception + Control Loop Demo</h3>
-            <span class="tag">Robotics + CV</span>
-          </div>
-          <p>A 2D differential-drive sim with synthetic camera frames. It's virtual and a simulation, no real hardware.</p>
-          <div class="meta">
-            <div><span class="k">Stack:</span> Python, simulation, segmentation, control loop</div>
-            <div><span class="k">Proof:</span> Runnable pipeline from repo; deterministic artifacts (logs/plots/GIF)</div>
-          </div>
-          <div class="linkrow">
-            <a class="link" href="https://github.com/OctaviusLeo/robotics-2d-perception-control" target="_blank" rel="noreferrer">Repo →</a>
-            <a class="link" href="assets/clean-run.gif">Demo (GIF) →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <h3>RAG-Lite Retrieval + Evaluation (TF-IDF)</h3>
-            <span class="tag">AI SWE + Eval</span>
-          </div>
-          <p>Production-ready retrieval system, hybrid fusion + optional cross-encoder reranking, chunking, and grounded citations for source attribution.</p>
-          <div class="meta">
-            <div><span class="k">Stack:</span> Scikit-learn, sentence-transformers, FastAPI, Docker, Pytest, GitHub Actions</div>
-            <div><span class="k">Proof:</span> Offline evaluation + benchmarking harness + CLI + FastAPI API + Docker + CI-tested codebase.</div>
-          </div>
-          <div class="linkrow">
-            <a class="link" href="https://github.com/OctaviusLeo/rag-lite-tfidf-eval" target="_blank" rel="noreferrer">Repo →</a>
-            <a class="link" href="assets/demo-rag.png">Demo (PNG) →</a>
           </div>
         </article>
       </div>
@@ -156,12 +234,13 @@
       <div class="about">
         <p>
           Fascinated by AI/ML well before today’s public LLM wave. I’ve been coding since learning through games and projects.
-          I focus on AI/software and embedded/robotics. This page is intentionally minimal: optimized for fast scanning and direct links to working repos/demos.
+          I focus on robotics simulation/test/autonomy and AI/ML engineering. This page is intentionally minimal: optimized for fast scanning and direct links to working repos/demos.
         </p>
         <ul class="about-list">
-          <li><span class="k">Seeking:</span> Embedded / Robotics Software / AI SWE.</li>
-          <li><span class="k">Systems:</span> embedded firmware - real-time loops - instrumentation</li>
-          <li><span class="k">Robotics/AI:</span> perception pipelines - control loops - retrieval + evaluation</li>
+          <li><span class="k">Seeking:</span> Robotics, simulation and test roles; AI/ML engineering roles.</li>
+          <li><span class="k">Robotics/Sim:</span> ROS 2 Jazzy - Nav2 - Gazebo Harmonic - Unreal Engine 5.8 - MuJoCo Warp</li>
+          <li><span class="k">AI/ML:</span> PyTorch - PEFT/LoRA - llama.cpp - retrieval + evaluation - PPO</li>
+          <li><span class="k">Embedded:</span> TI Tiva C (TM4C123) - real-time sEMG signal processing</li>
         </ul>
       </div>
     </section>
